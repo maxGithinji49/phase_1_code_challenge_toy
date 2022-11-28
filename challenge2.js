@@ -1,3 +1,5 @@
+
+//  create a prompt that allows input of the speed limit.
 const readline = require('readline');
 const input = readline.createInterface(
     {
@@ -6,6 +8,8 @@ const input = readline.createInterface(
     }
 );
 
+// create a function with nested conditions that allow one to receive an 
+// output depending on the value received from the input
 input.question("Speed of the car: ", function (speedLimit) {
     let demeritPoints = (speedLimit-70)/5
 
@@ -18,5 +22,6 @@ else if ( speedLimit > 70) {
         process.stdout.write('License suspended');
     }
 }
+input.close ();
 
 })
